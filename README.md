@@ -101,14 +101,14 @@ Para conectar el cliente con el servidor, en la consola de IRSSI, colocar:
 ```diff
 /connect <ip_server_listening>
 ```
-Para correr los scripts de Python con las librerías de Scapy, simplemente se utiliza: 
+Para correr los scripts de Python dentro del contenedor de Scapy, simplemente se utiliza: 
 
 ```diff
 # python3 <script.py>
 ```
 
 ## Acknowledgements
-Give credit here.
+
 - El proyecto se basó en los repositorios de Miniircd: https://github.com/jrosdahl/miniircd y de IRSSI: https://github.com/irssi/irssi
 - Si bien no entregué la tarea 2, siento que le puse demasiado empeño a esta tarea para salvar el ramo, profe confío en que lo hice bien :)
 
