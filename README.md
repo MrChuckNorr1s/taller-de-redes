@@ -69,6 +69,27 @@ Finalmente se ejecuta el cliente:
 ```diff
 # irrsi
 ```
+
+Además para la tarea 3, se crea un contenedor que contendrá Scapy, pero este contenedor tendrá la misma dirección que el servidor, para así traficar y capturar de manera más eficaz:
+```diff
+sudo docker run -it --name scapy-container ubuntu:latest /bin/bash
+```
+Adentro de la consola del contenedor, se hará lo siguiente:
+```diff
+# apt-get update
+# apt-get install -y python3 python3-pip libpcap0.8
+# pip install scapy
+```
+Luego se procede a salir del contenedor y se utiliza el comando de Docker "Commit":
+```diff
+# exit
+sudo docker commit scapy-container scapy_image
+```
+Luego se corre un contenedor con la imagen del Commit:
+```diff
+docker run -it --name scapy --network container:servidor2-container scapy-image /bin/bash
+```
+
 ## Usage
 
 Para iniciar el servidor IRC se utiliza el comando:
@@ -80,7 +101,11 @@ Para conectar el cliente con el servidor, en la consola de IRSSI, colocar:
 ```diff
 /connect <ip_server_listening>
 ```
+Para correr los scripts de Python con las librerías de Scapy, simplemente se utiliza: 
 
+```diff
+# python3 <script.py>
+```
 
 ## Acknowledgements
 Give credit here.
