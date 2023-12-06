@@ -1,6 +1,5 @@
-# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+# Taller de Redes y Servicios
+> Conexión entre cliente y servidor mediante contenedores de Docker.
 
 ## Table of Contents
 * [General Info](#general-information)
