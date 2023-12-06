@@ -85,6 +85,6 @@ Para conectar el cliente con el servidor, en la consola de IRSSI, colocar:
 ## Acknowledgements
 Give credit here.
 - El proyecto se basó en los repositorios de Miniircd: https://github.com/jrosdahl/miniircd y de IRSSI: https://github.com/irssi/irssi
-- Si bien no entregué la tarea 2, siento que le puse demasiado empeño a esta tarea para salvar el ramo, profe confío en que lo hice bien :).
+- Si bien no entregué la tarea 2, siento que le puse demasiado empeño a esta tarea para salvar el ramo, profe confío en que lo hice bien :)
 
 
