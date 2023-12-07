@@ -1,7 +1,7 @@
 from scapy.all import sniff, IP, TCP, Raw
 
 def modificar3(packet):
-    if IP in packet and TCP in packet and packet[IP].src == "172.17.0.3" and packet[IP].dst == "172.17.0.2" and packet[TCP].dport == 58382:
+    if IP in packet and TCP in packet and packet[IP].src == "172.17.0.3" and packet[IP].dst == "172.17.0.2":
         # Check if the Raw layer and payload are present
         if Raw in packet and packet[Raw].load:
             # Get the original payload as bytes
@@ -16,6 +16,9 @@ def modificar3(packet):
 
                 # Update the Raw layer with the modified payload
                 packet[Raw].load = modified_payload
+
+                # Dynamically set the destination port to the original port in the intercepted packet
+                packet[TCP].dport = packet[TCP].sport
 
                 return packet
 
